@@ -1,0 +1,8 @@
+{
+  "name": "englishtown",
+  "version": "0.0.0",
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "modernizr": "~2.8.3"
+  }
+}
