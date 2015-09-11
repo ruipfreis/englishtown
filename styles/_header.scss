@@ -61,6 +61,7 @@ header {
   border-right: 1px solid #fff;
 
   @media #{$l-media-query} {
+    position: relative;
     float: none;
     border-right: none;
     display: inline-block;
@@ -104,9 +105,44 @@ header {
     text-align: center;
     line-height: $m-top-nav-bar-height - 1;
     background: $lightGray;
+    cursor: pointer;
 
     img {
       vertical-align: middle;
+    }
+  }
+
+  @media #{$l-media-query} {
+    position: absolute;
+    max-width: 100%;
+    text-align: right;
+    right: 0;
+    border-bottom: $darkGray 1px solid;
+    border-right: $darkGray 1px solid;
+    background: $white;
+
+    li {
+      display: block;
+      max-width: 100%;
+      padding: 0 15px;
+
+      &:first-child a{
+        border-top: none;
+      }
+    }
+
+    a {
+      float: right;
+      overflow: hidden;
+      text-align: right;
+      display: block;
+      width: 100%;
+      border-top: 1px solid #000000;
+      background: $white;
+
+      &:hover {
+        color: $pink;
+      }
     }
   }
 }
@@ -239,6 +275,7 @@ header {
   font-size: 0.9231rem;
   max-width: $app-max-width;
   margin: 0 auto;
+  z-index: 8;
 
   li {
     width: 100%;
@@ -259,7 +296,7 @@ header {
   }
 
   @media #{$l-media-query} {
-    display: block;
+    display: block !important;
     position: static;
     //border-bottom: 1px solid $lightGray;
     overflow: hidden;
