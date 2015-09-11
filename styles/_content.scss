@@ -1,0 +1,113 @@
+/*
+.top-nav {
+  font-size: 0.8125rem;
+}*/
+
+//mobile
+//MAIN CONTENT
+.main-content{
+  margin-top: $m-top-nav-bar-height + $m-main-nav-bar-height;
+
+  @media #{$b-media-query}, #{$l-media-query} {
+    margin-top: 0;
+  }
+}
+
+.section-wrapper {
+  max-width: 100%;
+  padding: 0 $m-app-margin;
+}
+
+.breadcrumbs-wrapper {
+  height: 59px;
+  background: url("/images/breadcrumbs-bg.png") center center;
+  background-size: cover;
+}
+
+.breadcrumbs {
+  max-width: $app-max-width;
+  margin: 0 auto;
+  font-family: $helveticaNeue;
+  font-size: 0.8125rem;
+  font-weight: bold;
+  line-height: 59px;
+
+  li {
+    display: inline-block;
+  }
+
+  .root {
+    color: $black;
+  }
+
+  a {
+    color: $blue;
+    text-decoration: none;
+  }
+}
+
+//BANNERS
+.banner .section-content {
+  position: relative;
+  text-align: left;
+  color: $white;
+  height: 280px;
+  overflow: hidden;
+
+  @media #{$m-media-query} {
+    width: 325px;
+  }
+
+  @media #{$b-media-query}, #{$l-media-query} {
+    width: 400px;
+    height: 450px;
+  }
+}
+
+.banner h1 {
+  font-family: $helveticaNeue;
+  font-size: 2.625rem;
+  margin-top: 50px;
+  text-transform: uppercase;
+  span {
+    font-size: 1.5em;
+  }
+  sup {
+    font-weight: normal;
+  }
+}
+
+.banner p {
+  font-family: $helveticaNeue;
+  font-size: 1.5rem;
+  font-style: italic;
+  margin: 20px 0;
+
+  small {
+    font-style: normal;
+  }
+}
+
+.banner .btn-pink {
+  position: absolute;
+  padding: 15px 70px;
+  bottom: 25px;
+}
+
+.banner.section-wrapper {
+  background: no-repeat;
+  background-size: cover;
+  background-position: 35% center;
+
+  @media #{$b-media-query}, #{$l-media-query} {
+    background-position: center center;
+  }
+}
+
+.pricing.section-wrapper {
+  background-image: url("/images/banner-pricing.png");
+}
+//BANNERS END
+
+
+//MAIN CONTENT END

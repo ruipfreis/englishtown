@@ -1,0 +1,51 @@
+body {
+  min-width: $app-min-width;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+.btn {
+  float: left;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.btn-pink {
+  @extend .btn;
+  background-color: $pink;
+  color: $white;
+}
+
+
+
+@media #{$s-media-query}, #{$m-media-query} {
+
+  .mobile-hide {
+    display: none !important;
+  }
+
+}
+
+@media #{$b-media-query}, #{$l-media-query} {
+
+  .desk-hide {
+    display: none !important;
+  }
+
+}
+
+.pound:before {
+  content:$pound;
+}
+
+.euro:before {
+  content:$euro;
+}

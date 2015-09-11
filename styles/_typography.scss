@@ -1,0 +1,73 @@
+//Fonts & Fallbacks
+$arial: Arial, 'sans-serif';
+$helveticaNeue: "Helvetica Neue", Helvetica, Arial, 'sans-serif';
+$HelveticaNeueLTPro: "HelveticaNeueLTPro", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$georgia: Georgia, "Times New Roman", Times, serif;
+
+
+$s-base_font_height: 12px;
+$m-base_font_height: 14px;
+$l-base_font_height: 14px;
+$base_font_height: 16px;
+
+$base_font: $arial;
+$base_line_height: 1;
+
+$header_font: $HelveticaNeueLTPro;
+
+
+html {
+  font-size: $base_font_height;
+  font-family: $base_font;
+  line-height: $base_line_height;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: $header_font;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+h1{
+  font-size: 3rem;
+}
+
+sup {
+  font-size: 0.5em;
+  vertical-align: super;
+}
+
+sub {
+  font-size: 0.5em;
+  vertical-align: sub;
+}
+
+small {
+  font-size: 0.8em;
+}
+
+
+
+@media #{$s-media-query} {
+
+  html {
+    font-size: $s-base_font_height;
+  }
+
+}
+
+@media #{$m-media-query} {
+
+  html {
+    font-size: $m-base_font_height;
+  }
+
+}
+
+@media #{$l-media-query} {
+
+  html {
+    font-size: $l-base_font_height;
+  }
+
+}

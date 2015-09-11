@@ -58,7 +58,8 @@ module.exports = function (grunt) {
       options: {
         port: 9000,
         // Change this to '0.0.0.0' to access the server from outside.
-        hostname: 'localhost',
+        //hostname: 'localhost',
+        hostname: '0.0.0.0',
         livereload: 34729
       },
       livereload: {
@@ -140,7 +141,7 @@ module.exports = function (grunt) {
         }]
       },
       options: {
-        sourceMap: true,
+        sourceMap: false,
         outputStyle: 'nested',
         imagePath: "<%= appConfig.app %>/images",
       }

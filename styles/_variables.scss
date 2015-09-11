@@ -1,0 +1,34 @@
+$app-min-width: 265px;
+$app-max-width: 1240px;
+
+//Colors
+$black: #000000;
+$white: #ffffff;
+$pink: #ec008c;
+
+$darkGray: #474a4e;
+$lightGray: #ededed;
+
+$EtBlue: #013f5e;
+$blue: #69839e;
+
+//mobile
+$m-top-nav-bar-height: 30px;
+$m-main-nav-bar-height: 64px;
+
+//desk
+$d-top-nav-bar-height: 36px;
+$d-main-nav-bar-height: 85px;
+
+$m-app-margin: 5%;
+
+//css iso symbol
+$pound:"\00a3";
+$euro:"\20ac";
+
+
+//media queries
+$s-media-query: "(max-width: 340px)";
+$m-media-query: "(min-width: 340px) and (max-width: 849px)";
+$l-media-query: "(min-width: 850px) and (max-width: 965px)";
+$b-media-query: "(min-width: 966px)";
