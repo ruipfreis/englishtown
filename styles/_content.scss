@@ -8,14 +8,45 @@
 .main-content{
   margin-top: $m-top-nav-bar-height + $m-main-nav-bar-height;
 
-  @media #{$b-media-query}, #{$l-media-query} {
+  @media #{$l-media-query} {
     margin-top: 0;
   }
 }
 
 .section-wrapper {
+  width: 100%;
+  overflow: hidden;
+
+  &.banner {
+    margin: 0;
+    max-width: 100%;
+  }
+
+  &.invert {
+    color: white;
+    background: $darkerGray;
+  }
+}
+
+.section-content {
   max-width: 100%;
   padding: 0 $m-app-margin;
+  margin: 40px 0;
+  overflow: hidden;
+  text-align: center;
+
+  > h1 {
+    sub {
+      display: block;
+      color: $pink;
+    }
+  }
+
+  @media #{$l-media-query} {
+    max-width: $app-max-width;
+    margin: 40px auto;
+    padding: 0;
+  }
 }
 
 .breadcrumbs-wrapper {
@@ -28,7 +59,7 @@
   max-width: $app-max-width;
   margin: 0 auto;
   font-family: $helveticaNeue;
-  font-size: 0.8125rem;
+  font-size: 0.7692rem;
   font-weight: bold;
   line-height: 59px;
 
@@ -51,42 +82,54 @@
   position: relative;
   text-align: left;
   color: $white;
-  height: 280px;
+  height: 325px;
+  width: 310px;
   overflow: hidden;
+  margin: 0;
 
-  @media #{$m-media-query} {
-    width: 325px;
-  }
-
-  @media #{$b-media-query}, #{$l-media-query} {
-    width: 400px;
+  @media #{$l-media-query} {
+    max-width: $app-max-width;
+    width: 100%;
+    margin: 0 auto;
     height: 450px;
+    padding-left: 5%;
   }
 }
 
 .banner h1 {
   font-family: $helveticaNeue;
-  font-size: 2.625rem;
-  margin-top: 50px;
+  font-size: 2.462rem;
+  margin-top: 40px;
   text-transform: uppercase;
   span {
-    font-size: 1.5em;
+    font-size: 1.875em;
   }
   sup {
     font-weight: normal;
   }
-}
 
-.banner p {
-  font-family: $helveticaNeue;
-  font-size: 1.5rem;
-  font-style: italic;
-  margin: 20px 0;
-
-  small {
-    font-style: normal;
+  @media #{$l-media-query} {
+    margin-top: 50px;
+    font-size: 3.231rem;
+    span {
+      font-size: 2.857em;
+    }
   }
 }
+
+.banner h2 {
+  font-family: $helveticaNeue;
+  font-style: italic;
+  font-weight: normal;
+  margin: 20px 0;
+
+  @media #{$l-media-query} {
+    margin: 60px 0;
+    font-size: 1.846rem;
+    width: 530px;
+  }
+}
+
 
 .banner .btn-pink {
   position: absolute;
@@ -99,7 +142,7 @@
   background-size: cover;
   background-position: 35% center;
 
-  @media #{$b-media-query}, #{$l-media-query} {
+  @media #{$l-media-query} {
     background-position: center center;
   }
 }
@@ -109,5 +152,191 @@
 }
 //BANNERS END
 
+
+//OUR PACKAGES
+
+.price-table {
+  color: $darkGray;
+  text-align: center;
+  border: 1px solid $price-table-border-color;
+  margin: 30px 0;
+  overflow: hidden;
+
+  &:first-child {
+    border: none;
+  }
+
+  @media #{$l-media-query} {
+    float: left;
+    width: 25%;
+    border-left: none;
+
+    &:first-child {
+      border: 1px solid $price-table-border-color;
+      width: 49%;
+
+      li {
+        text-align: left;
+      }
+    }
+  }
+}
+
+.price-table-header-wrapper {
+  @media #{$l-media-query} {
+    display:table;
+    width:100%;
+    height:98px;
+  }
+}
+
+.price-table-header {
+  font-size: 1.5rem;
+  text-align: center;
+
+  p {
+    font-family: $georgia;
+    font-style: italic;
+  }
+
+  h2 {
+    padding: 15px 0;
+    small, sub {
+      font-family: $georgia;
+      font-style: italic;
+      font-weight: normal;
+    }
+  }
+
+  @media #{$l-media-query} {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    height: 98px;
+  }
+}
+
+.price-table-rows {
+
+  li {
+    border-bottom: 1px solid $price-table-border-color;
+    padding: 15px;
+
+    &:first-child {
+      border-top: 1px solid $price-table-border-color;
+    }
+
+    &.uncheck {
+      display: none;
+    }
+
+    @media #{$l-media-query} {
+      text-align: center;
+      display: table;
+      width: 100%;
+      height: 38px;
+
+      &.uncheck {
+        display: table;
+      }
+    }
+  }
+
+  p {
+    font-family: $georgia;
+    font-style: italic;
+  }
+
+  @media #{$l-media-query} {
+    .check p, .uncheck p {
+      display: none;
+    }
+
+    p {
+      display:table-cell;
+      vertical-align:middle;
+    }
+  }
+}
+
+.price-table-footer-wrapper {
+  @media #{$l-media-query} {
+    display:table;
+    width:100%;
+    height:258px;
+  }
+}
+
+.price-table-footer {
+  padding: 15px;
+
+  p {
+    font-family: $georgia;
+    font-style: italic;
+    padding-bottom: 15px;
+  }
+
+  small {
+    font-style: normal;
+  }
+
+  .btn-pink {
+    display: block;
+    float: none;
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  @media #{$l-media-query} {
+    display:table-cell;
+    vertical-align:middle;
+    text-align: center;
+  }
+
+}
+
+//OUR PACKAGES END
+
+//OFFERS
+
+.et-offers {
+  margin: 40px 0;
+}
+
+.et-offer-wrapper {
+  margin-top: 35px;
+  font-family: $arial;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  @media #{$l-media-query} {
+    float: left;
+    max-width: 50%;
+    text-align: left;
+
+    &:first-child {
+      margin-top: 35px;
+    }
+  }
+}
+
+.et-offer-content {
+  margin-top: 25px;
+
+  h3 {
+    font-family: $georgia;
+    margin-top: 25px;
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  p {
+    margin: 5px 0;
+  }
+}
+
+//OFFERS END
 
 //MAIN CONTENT END

@@ -22,11 +22,19 @@ img {
   @extend .btn;
   background-color: $pink;
   color: $white;
+  font-size: 0.9231rem;
+
+  &:hover {
+    background-color: $pink;
+    color: $white;
+  }
+  &:active {
+    background-color: $white;
+    color: $pink;
+  }
 }
 
-
-
-@media #{$s-media-query}, #{$m-media-query} {
+@media #{$s-media-query} {
 
   .mobile-hide {
     display: none !important;
@@ -34,7 +42,7 @@ img {
 
 }
 
-@media #{$b-media-query}, #{$l-media-query} {
+@media #{$l-media-query} {
 
   .desk-hide {
     display: none !important;

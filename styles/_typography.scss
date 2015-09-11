@@ -4,11 +4,7 @@ $helveticaNeue: "Helvetica Neue", Helvetica, Arial, 'sans-serif';
 $HelveticaNeueLTPro: "HelveticaNeueLTPro", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $georgia: Georgia, "Times New Roman", Times, serif;
 
-
-$s-base_font_height: 12px;
-$m-base_font_height: 14px;
-$l-base_font_height: 14px;
-$base_font_height: 16px;
+$base_font_height: 13px;
 
 $base_font: $arial;
 $base_line_height: 1;
@@ -17,6 +13,7 @@ $header_font: $HelveticaNeueLTPro;
 
 
 html {
+  min-width: $app-min-width;
   font-size: $base_font_height;
   font-family: $base_font;
   line-height: $base_line_height;
@@ -29,7 +26,23 @@ h1, h2, h3, h4, h5 {
 }
 
 h1{
-  font-size: 3rem;
+  font-size: 2.769rem;
+}
+
+h2{
+  font-size: 1.385rem;
+}
+
+h3{
+  font-size: 1.231rem;
+}
+
+h4{
+  font-size: 1rem;
+}
+
+b {
+  font-weight: bold;
 }
 
 sup {
@@ -43,31 +56,17 @@ sub {
 }
 
 small {
-  font-size: 0.8em;
+  font-size: 0.7778em;
 }
 
-
-
-@media #{$s-media-query} {
-
-  html {
-    font-size: $s-base_font_height;
-  }
-
+.text-left {
+  text-align: left;
 }
 
-@media #{$m-media-query} {
-
-  html {
-    font-size: $m-base_font_height;
-  }
-
+.text-right {
+  text-align: right;
 }
 
-@media #{$l-media-query} {
-
-  html {
-    font-size: $l-base_font_height;
-  }
-
+.text-center {
+  text-align: center;
 }

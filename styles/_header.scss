@@ -1,11 +1,14 @@
 header {
-  max-width: $app-max-width;
-  margin: 0 auto;
   width: 100%;
 }
 
 //TOP NAV BAR
 .top-nav-wrapper {
+  max-width: $app-max-width;
+  margin: 0 auto;
+}
+
+.top-nav-content {
   background: $lightGray;
   position: fixed;
   top: 0;
@@ -16,9 +19,10 @@ header {
   z-index: 10;
   min-width: $app-min-width;
 
-  @media #{$b-media-query}, #{$l-media-query} {
+
+  @media #{$l-media-query} {
     font-family: $arial;
-    font-size: 0.9rem;
+    font-size: 0.8462rem;
     background: transparent;
     float: right;
     position: static;
@@ -28,18 +32,27 @@ header {
 }
 
 .top-nav {
+  float: left;
   font-family: $arial;
   font-weight: bold;
-  display: inline-block;
+  font-size: 0.7692rem;
   line-height: $d-top-nav-bar-height - 2;
+  margin-right: 20px;
+  margin-top: 2px;
 
   li {
     display: inline-block;
+
+    &:first-child > a{
+      border-left: none;
+    }
   }
 
   a {
     text-decoration: none;
     color: $black;
+    border-left: 1px solid;
+    padding: 0 10px;
   }
 }
 
@@ -47,7 +60,7 @@ header {
   float: left;
   border-right: 1px solid #fff;
 
-  @media #{$b-media-query}, #{$l-media-query} {
+  @media #{$l-media-query} {
     float: none;
     border-right: none;
     display: inline-block;
@@ -62,7 +75,7 @@ header {
   line-height: $m-top-nav-bar-height - 2;
   text-align: center;
 
-  @media #{$b-media-query}, #{$l-media-query} {
+  @media #{$l-media-query} {
     background: transparent;
     border-bottom: none;
     border-right: none;
@@ -103,7 +116,7 @@ header {
 }
 
 .btn-login-wrapper {
-  @media #{$b-media-query}, #{$l-media-query} {
+  @media #{$l-media-query} {
     float: none;
     display: inline-block;
   }
@@ -113,7 +126,7 @@ header {
   padding: 0 15px;
   line-height: $m-top-nav-bar-height - 1;
 
-  @media #{$b-media-query}, #{$l-media-query} {
+  @media #{$l-media-query} {
     line-height: $d-top-nav-bar-height - 1;
   }
 }
@@ -125,32 +138,36 @@ header {
 //LOGO
 .header-logo-wrapper {
   position: fixed;
-  height: $m-main-nav-bar-height - 1;
-  width: 100%;
+  height: $m-main-nav-bar-height;
+  width: 100% - $m-app-margin*2;
   top: $m-top-nav-bar-height;
   left: 0;
-  border-bottom: 1px solid $lightGray;
   padding: 0 $m-app-margin;
-  min-width: $app-min-width;
+  background: $white;
+  z-index: 9;
+  max-width: $app-max-width;
+  margin: 0 auto;
+  border-bottom: 1px solid $lightGray;
 
-  @media #{$b-media-query}, #{$l-media-query} {
+  @media #{$l-media-query} {
     position: static;
     padding: 0;
-    height: $d-main-nav-bar-height - 1;
+    height: $d-main-nav-bar-height;
     clear: both;
+    border-bottom: none;
   }
 }
 
 .header-logo {
   float: left;
-  line-height: $m-main-nav-bar-height - 1;
-  width: 65% - $m-app-margin;
+  line-height: $m-main-nav-bar-height;
+  width: 65%;
   img {
     vertical-align: middle;
   }
 
-  @media #{$b-media-query}, #{$l-media-query} {
-    line-height: $d-main-nav-bar-height - 1;
+  @media #{$l-media-query} {
+    line-height: $d-main-nav-bar-height;
     width: auto;
   }
 }
@@ -171,7 +188,7 @@ header {
 //NAV
 .main-nav-open-wrapper {
   float: left;
-  width: 35% - $m-app-margin;
+  width: 35%;
   height: $m-main-nav-bar-height - 1;
 }
 
@@ -207,6 +224,10 @@ header {
   }
 }
 
+.main-nav-wrapper {
+  border-top: 1px solid $lightGray;
+}
+
 .main-nav {
   display: none;
   position: fixed;
@@ -215,6 +236,9 @@ header {
   width: 100%;
   text-align: center;
   background: $white;
+  font-size: 0.9231rem;
+  max-width: $app-max-width;
+  margin: 0 auto;
 
   li {
     width: 100%;
@@ -226,7 +250,7 @@ header {
     color: $black;
     width: 100%;
     line-height: $m-top-nav-bar-height;
-    border-bottom: 1px solid $lightGray;
+    //border-bottom: 1px solid $lightGray;
 
     &:active, &:hover {
       background-color: $EtBlue;
@@ -234,16 +258,15 @@ header {
     }
   }
 
-  @media #{$b-media-query}, #{$l-media-query} {
+  @media #{$l-media-query} {
     display: block;
     position: static;
-    border-bottom: 1px solid $lightGray;
+    //border-bottom: 1px solid $lightGray;
     overflow: hidden;
 
     li {
       width: auto;
       display: inline-block;
-      font-size: 0.9rem;
     }
 
     a{

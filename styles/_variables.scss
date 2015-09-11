@@ -6,6 +6,7 @@ $black: #000000;
 $white: #ffffff;
 $pink: #ec008c;
 
+$darkerGray: #252525;
 $darkGray: #474a4e;
 $lightGray: #ededed;
 
@@ -26,9 +27,8 @@ $m-app-margin: 5%;
 $pound:"\00a3";
 $euro:"\20ac";
 
+$price-table-border-color: #e1dad2;
 
 //media queries
-$s-media-query: "(max-width: 340px)";
-$m-media-query: "(min-width: 340px) and (max-width: 849px)";
-$l-media-query: "(min-width: 850px) and (max-width: 965px)";
-$b-media-query: "(min-width: 966px)";
+$s-media-query: "(max-width: 824px)";
+$l-media-query: "(min-width: 825px)";
