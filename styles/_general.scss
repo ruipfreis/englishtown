@@ -22,7 +22,7 @@ img {
   @extend .btn;
   background-color: $pink;
   color: $white;
-  font-size: 0.9231rem;
+  @include font-size(0.9231);
 
   &:hover {
     background-color: $pink;

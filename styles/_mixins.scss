@@ -1,0 +1,39 @@
+//Font Face Mixin
+@mixin font-face($name, $eot: false, $woff2: false, $woff:false, $ttf:false, $svg:false, $weight: false, $style: false) {
+  $iefont: unquote("#{$eot}?#iefix");
+  @font-face {
+    font-family: quote($name);
+    @if $eot {
+      src: url($eot);
+      $font-files: url($iefont) unquote("format('embedded-opentype')");
+    }
+    @if $woff2 {
+      $font-files: url($woff2) unquote("format('woff2')"), $font-files;
+    }
+    @if $woff {
+      $font-files: url($woff) unquote("format('woff')"), $font-files;
+    }
+    @if $ttf {
+      $font-files: url($ttf) unquote("format('truetype')"), $font-files;
+    }
+    @if $svg {
+      $font-files: url(unquote("#{$svg}#svgFontName")) unquote("format('svg')"), $font-files;
+    }
+    src: $font-files;
+    @if $weight {
+      font-weight: $weight;
+    }
+    @if $style {
+      font-style: $style;
+    }
+  }
+}
+
+@mixin font-size($sizeValue: 1.6) {
+  $base : 10px;
+  @if $base_font_height {
+    $base:$base_font_height;
+  }
+  font-size: ($sizeValue * $base);
+  font-size: $sizeValue + rem;
+}

@@ -6,12 +6,24 @@
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
   <title>English Town</title>
 
+
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+
+  <!-- build:js(.) scripts/modernizr.js -->
+  <!-- build:js(.) scripts/respond.js -->
+  <!--[if lt IE 9]>
+  <script src="bower_components/modernizr/modernizr.js"></script>
+  <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
+  <script src="bower_components/respond/dest/respond.src.js"></script>
+  <script src="bower_components/jquery-legacy/dist/jquery.js"></script>
+  <![endif]-->
+  <!-- endbuild -->
   <!-- endbuild -->
 
 </head>
@@ -33,38 +45,38 @@
       <div class="btn-lang-wrapper">
 
         <a href="#" class="btn btn-lang">
-          <span class="mobile-hide">Switch Language</span>
-          <img class="desk-hide" alt="Switch Language" src="images/flags/gb.png">
+          <span class="mobile-hide">Switch Language<span class="icon arrow-down"></span></span>
+          <div class="desk-hide flag uk"></div>
         </a>
 
         <ul class="lang-list">
           <li>
             <a>
-              <img class="desk-hide" alt="English" src="images/flags/gb.png">
+              <div class="desk-hide flag uk"></div>
               <span class="mobile-hide">English</span>
             </a>
           </li>
           <li>
             <a>
-              <img class="desk-hide" alt="French" src="images/flags/fr.png">
+              <div class="desk-hide flag france"></div>
               <span class="mobile-hide">French</span>
             </a>
           </li>
           <li>
             <a>
-              <img class="desk-hide" alt="German" src="images/flags/de.png">
+              <div class="desk-hide flag germany"></div>
               <span class="mobile-hide">German</span>
             </a>
           </li>
           <li>
             <a>
-              <img class="desk-hide" alt="Portuguese" src="images/flags/pt.png">
+              <div class="desk-hide flag portugal"></div>
               <span class="mobile-hide">Portuguese</span>
             </a>
           </li>
           <li>
             <a>
-              <img class="desk-hide" alt="Spanish" src="images/flags/es.png">
+              <div class="desk-hide flag spain"></div>
               <span class="mobile-hide">Spanish</span>
             </a>
           </li>
@@ -73,7 +85,7 @@
 
 
       <div class="btn-login-wrapper">
-        <a class="btn btn-login">Log In</a>
+        <a class="btn btn-login"><span class="icon lock"></span>Log In</a>
       </div>
 
       <div class="btn-register-wrapper desk-hide">
@@ -92,7 +104,7 @@
 
     <div class="header-phone-wrapper mobile-hide">
       <a class="header-phone" href="tel://18003871463">
-        <h2>1 800 387 1463</h2>
+        <h2><span class="icon phone"></span>1 800 387 1463</h2>
       </a>
     </div>
 
@@ -156,15 +168,32 @@
           </div>
 
           <ul class="price-table-rows mobile-hide">
-            <li class="graph"><p>Placement test, study plan and completion certificate</p></li>
-            <li class="book"><p>1500 hours of interactive exercises across 16 levels</p></li>
-            <li class="group"><p>30 hours of Group Classes per month</p></li>
-            <li class="report"><p>Detailed progress report</p></li>
-            <li class="business"><p>Modules for Business English, TOEIC + TOEFL</p></li>
-            <li class="community"><p>Englishtown Community</p></li>
-            <li class="private"><p>Packages with 24, 48 or 100 hours of private lessons</p></li>
-            <li class="curriculum"><p>Custom curriculum</p></li>
-            <li class="coaching"><p>Personal coaching</p></li>
+            <li class="graph">
+              <p><span class="icon bargraph"></span>Placement test, study plan and completion certificate</p>
+            </li>
+            <li class="book">
+              <p><span class="icon book"></span>1500 hours of interactive exercises across 16 levels</p>
+            </li>
+            <li class="group">
+              <p><span class="icon users"></span>30 hours of Group Classes per month</p>
+            </li>
+            <li class="report">
+              <p><span class="icon newspaper"></span>Detailed progress report</p>
+            </li>
+            <li class="business">
+              <p><span class="icon suitcase"></span>Modules for Business English, TOEIC + TOEFL</p></li>
+            <li class="community">
+              <p><span class="icon globe"></span>Englishtown Community</p>
+            </li>
+            <li class="private">
+              <p><span class="icon user"></span>Packages with 24, 48 or 100 hours of private lessons</p>
+            </li>
+            <li class="curriculum">
+              <p><span class="icon lightbulb"></span>Custom curriculum</p>
+            </li>
+            <li class="coaching">
+              <p><span class="icon briefcase"></span>Personal coaching</p>
+            </li>
           </ul>
 
           <div class="price-table-footer-wrapper">
@@ -193,21 +222,57 @@
             <div class="price-table-header">
               <h2>
                 Online School<br>
-                <sub>First month for just 1 Euro</sub>
+                <small>First month for just 1 Euro</small>
               </h2>
             </div>
           </div>
 
           <ul class="price-table-rows">
-            <li class="graph check"><p>Placement test, study plan and completion certificate</p></li>
-            <li class="book check"><p>1500 hours of interactive exercises across 16 levels</p></li>
-            <li class="group check"><p>30 hours of Group Classes per month</p></li>
-            <li class="report check"><p>Detailed progress report</p></li>
-            <li class="business check"><p>Modules for Business English, TOEIC + TOEFL</p></li>
-            <li class="community check"><p>Englishtown Community</p></li>
-            <li class="private uncheck"><p>Packages with 24, 48 or 100 hours of private lessons</p></li>
-            <li class="curriculum uncheck"><p>Custom curriculum</p></li>
-            <li class="coaching uncheck"><p>Personal coaching</p></li>
+            <li class="graph check">
+              <p>
+                <span class="icon check"></span>
+                <span class="text">Placement test, study plan and completion certificate</span>
+              </p>
+            </li>
+            <li class="book check">
+              <p>
+                <span class="icon check"></span>
+                <span class="text">1500 hours of interactive exercises across 16 levels</span>
+              </p>
+            </li>
+            <li class="group check">
+              <p>
+                <span class="icon check"></span>
+                <span class="text">30 hours of Group Classes per month</span>
+              </p>
+            </li>
+            <li class="report check">
+              <p>
+                <span class="icon check"></span>
+                <span class="text">Detailed progress report</span>
+              </p>
+            </li>
+            <li class="business check">
+              <p>
+                <span class="icon check"></span>
+                <span class="text">Modules for Business English, TOEIC + TOEFL</span>
+              </p>
+            </li>
+            <li class="community check">
+              <p>
+                <span class="icon check"></span>
+                <span class="text">Englishtown Community</span>
+              </p>
+            </li>
+            <li class="private uncheck">
+              <p><span class="text">Packages with 24, 48 or 100 hours of private lessons</span></p>
+            </li>
+            <li class="curriculum uncheck">
+              <p><span class="text">Custom curriculum</span></p>
+            </li>
+            <li class="coaching uncheck">
+              <p><span class="text">Personal coaching</span></p>
+            </li>
           </ul>
 
           <div class="price-table-footer-wrapper">
@@ -238,21 +303,66 @@
             <div class="price-table-header">
               <h2>
                 Private Teacher<br>
-                <sub>Comprehensive learning</sub>
+                <small>Comprehensive learning</small>
               </h2>
             </div>
           </div>
 
           <ul class="price-table-rows">
-            <li class="graph check"><p>Placement test, study plan and completion certificate</p></li>
-            <li class="book check"><p>1500 hours of interactive exercises across 16 levels</p></li>
-            <li class="group check"><p>30 hours of Group Classes per month</p></li>
-            <li class="report check"><p>Detailed progress report</p></li>
-            <li class="business check"><p>Modules for Business English, TOEIC + TOEFL</p></li>
-            <li class="community check"><p>Englishtown Community</p></li>
-            <li class="private check"><p>Packages with 24, 48 or 100 hours of private lessons</p></li>
-            <li class="curriculum check"><p>Custom curriculum</p></li>
-            <li class="coaching check"><p>Personal coaching</p></li>
+            <li class="graph check">
+              <p>
+                <span class="icon check"></span>
+                <span class="text">Placement test, study plan and completion certificate</span>
+              </p>
+            </li>
+            <li class="book check">
+              <p>
+                <span class="icon check"></span>
+                <span class="text">1500 hours of interactive exercises across 16 levels</span>
+              </p>
+            </li>
+            <li class="group check">
+              <p>
+                <span class="icon check"></span>
+                <span class="text">30 hours of Group Classes per month</span>
+              </p>
+            </li>
+            <li class="report check">
+              <p>
+                <span class="icon check"></span>
+                <span class="text">Detailed progress report</span>
+              </p>
+            </li>
+            <li class="business check">
+              <p>
+                <span class="icon check"></span>
+                <span class="text">Modules for Business English, TOEIC + TOEFL</span>
+              </p>
+            </li>
+            <li class="community check">
+              <p>
+                <span class="icon check"></span>
+                <span class="text">Englishtown Community</span>
+              </p>
+            </li>
+            <li class="private check">
+              <p>
+                <span class="icon check"></span>
+                <span class="text">Packages with 24, 48 or 100 hours of private lessons</span>
+              </p>
+            </li>
+            <li class="curriculum check">
+              <p>
+                <span class="icon check"></span>
+                <span class="text">Custom curriculum</span>
+              </p>
+            </li>
+            <li class="coaching check">
+              <p>
+                <span class="icon check"></span>
+                <span class="text">Personal coaching</span>
+              </p>
+            </li>
           </ul>
 
           <div class="price-table-footer-wrapper">
@@ -450,15 +560,9 @@
 
 </footer>
 
-<!-- build:js(.) scripts/modernizr.js -->
-<!--[if lt IE 9]>
-<script src="bower_components/modernizr/modernizr.js"></script>
-<![endif]-->
-<!-- endbuild -->
-
 <!-- build:js(.) scripts/vendor.js -->
 <!-- bower:js -->
-<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/jquery-modern/dist/jquery.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 

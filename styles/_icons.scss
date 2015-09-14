@@ -1,0 +1,91 @@
+.flag {
+  background: url("/images/flag-sprite.png") no-repeat;
+  width: 16px;
+  height: 11px;
+  display: inline-block;
+  vertical-align: middle;
+
+  &.germany {
+    background-position: 0 0;
+  }
+
+  &.spain {
+    background-position: -16px 0;
+  }
+
+  &.france {
+    background-position: -32px 0;
+  }
+
+  &.uk {
+    background-position: -48px 0;
+  }
+
+  &.portugal {
+    background-position: -64px 0;
+  }
+}
+
+.icon {
+  background: url("/images/icon-sprite.png") no-repeat;
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  vertical-align: middle;
+
+  &.check {
+    background-position: 0 0;
+  }
+
+  &.briefcase {
+    background-position: -22px 0;
+  }
+
+  &.lightbulb {
+    background-position: -44px 0;
+  }
+
+  &.user {
+    background-position: -66px 0;
+  }
+
+  &.globe {
+    background-position: -88px 0;
+  }
+
+  &.suitcase {
+    background-position: -110px 0;
+  }
+
+  &.newspaper {
+    background-position: -132px 0;
+  }
+
+  &.users {
+    background-position: -154px 0;
+  }
+
+  &.book {
+    background-position: -176px 0;
+  }
+
+  &.bargraph {
+    background-position: -198px 0;
+  }
+
+  &.arrow-down {
+    background-position: -220px 0;
+  }
+
+  &.lock {
+    background-position: -242px 0;
+  }
+
+  &.phone {
+    background-position: -264px 0;
+  }
+
+  &.menu {
+    background-position: -286px 0;
+  }
+}

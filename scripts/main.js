@@ -1,3 +1,9 @@
+function toggleMenu(btn, menu){
+  $(btn).click(function(){
+    $(menu).toggle();
+  });
+}
+
 $(function(){
   var
     changeLangBtn = $('.btn-lang'),
@@ -9,11 +15,5 @@ $(function(){
   toggleMenu(openMainMenuBtn, mainNavMenu);
   toggleMenu(mainNavMenu, mainNavMenu);
   toggleMenu(langList, langList);
-
-  function toggleMenu(btn, menu){
-    $(btn).click(function(){
-      $(menu).toggle();
-    });
-  }
 
 });

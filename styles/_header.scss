@@ -22,7 +22,7 @@ header {
 
   @media #{$l-media-query} {
     font-family: $arial;
-    font-size: 0.8462rem;
+    @include font-size(0.8462);
     background: transparent;
     float: right;
     position: static;
@@ -35,10 +35,11 @@ header {
   float: left;
   font-family: $arial;
   font-weight: bold;
-  font-size: 0.7692rem;
+  @include font-size(0.7692);
   line-height: $d-top-nav-bar-height - 2;
   margin-right: 20px;
   margin-top: 2px;
+  overflow: hidden;
 
   li {
     display: inline-block;
@@ -76,6 +77,10 @@ header {
   line-height: $m-top-nav-bar-height - 2;
   text-align: center;
 
+  .arrow-down{
+    margin-bottom: 3px;
+  }
+
   @media #{$l-media-query} {
     background: transparent;
     border-bottom: none;
@@ -83,6 +88,12 @@ header {
     width: auto;
     line-height: $d-top-nav-bar-height - 2;
     color: $black;
+  }
+
+  .flag {
+    height: $m-top-nav-bar-height - 12;
+    margin: 0 auto;
+    margin-top: 9px;
   }
 }
 
@@ -110,6 +121,13 @@ header {
     img {
       vertical-align: middle;
     }
+
+    .flag {
+      height: $m-top-nav-bar-height - 11;
+      margin: 0 auto;
+      margin-top: 9px;
+    }
+
   }
 
   @media #{$l-media-query} {
@@ -161,6 +179,10 @@ header {
 .btn-login, .btn-register {
   padding: 0 15px;
   line-height: $m-top-nav-bar-height - 1;
+
+  .lock {
+    margin-bottom: 3px;
+  }
 
   @media #{$l-media-query} {
     line-height: $d-top-nav-bar-height - 1;
@@ -272,7 +294,7 @@ header {
   width: 100%;
   text-align: center;
   background: $white;
-  font-size: 0.9231rem;
+  @include font-size(0.9231);
   max-width: $app-max-width;
   margin: 0 auto;
   z-index: 8;

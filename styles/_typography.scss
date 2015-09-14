@@ -1,17 +1,3 @@
-//Fonts & Fallbacks
-$arial: Arial, 'sans-serif';
-$helveticaNeue: "Helvetica Neue", Helvetica, Arial, 'sans-serif';
-$HelveticaNeueLTPro: "HelveticaNeueLTPro", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-$georgia: Georgia, "Times New Roman", Times, serif;
-
-$base_font_height: 13px;
-
-$base_font: $arial;
-$base_line_height: 1;
-
-$header_font: $HelveticaNeueLTPro;
-
-
 html {
   min-width: $app-min-width;
   font-size: $base_font_height;
@@ -26,19 +12,19 @@ h1, h2, h3, h4, h5 {
 }
 
 h1{
-  font-size: 2.769rem;
+  @include font-size(2.769);
 }
 
 h2{
-  font-size: 1.385rem;
+  @include font-size(1.385);
 }
 
 h3{
-  font-size: 1.231rem;
+  @include font-size(1.231)
 }
 
 h4{
-  font-size: 1rem;
+  @include font-size(1)
 }
 
 b {
@@ -70,3 +56,5 @@ small {
 .text-center {
   text-align: center;
 }
+
+

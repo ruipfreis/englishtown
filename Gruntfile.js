@@ -72,6 +72,10 @@ module.exports = function (grunt) {
                 '/bower_components',
                 serveStatic('./bower_components')
               ),
+              connect().use(
+                '/fonts',
+                serveStatic('./fonts')
+              ),
               serveStatic(appConfig.app)
             ];
           }
