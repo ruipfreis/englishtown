@@ -13,7 +13,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  height: $m-top-nav-bar-height - 1;
+  height: $m-top-nav-bar-height;
   width: 100%;
   border-bottom: 1px solid #cfc9be;
   z-index: 10;
@@ -53,7 +53,7 @@ header {
     text-decoration: none;
     color: $black;
     border-left: 1px solid;
-    padding: 0 10px;
+    padding: 0 15px;
   }
 }
 
@@ -209,7 +209,7 @@ header {
 
   @media #{$l-media-query} {
     position: static;
-    padding: 0;
+    padding: 0 15px;
     height: $d-main-nav-bar-height;
     clear: both;
     border-bottom: none;

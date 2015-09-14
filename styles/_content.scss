@@ -176,7 +176,6 @@ $evenRow: #f3ede6;
   text-align: center;
   border: 1px solid $price-table-border-color;
   margin: 30px 0;
-  overflow: hidden;
 
   &:first-child {
     border: none;
@@ -199,7 +198,6 @@ $evenRow: #f3ede6;
 
     &:first-child {
       border: 1px solid $price-table-border-color;
-      //border-right: none;
       width: 50%;
 
       li {
@@ -225,7 +223,7 @@ $evenRow: #f3ede6;
           background: url("/images/table-shape.png") no-repeat;
           height: 98px;
           position: absolute;
-          left: 0;
+          left: -1px;
           top: 0;
           width: 14px;
         }
