@@ -126,7 +126,7 @@
 }
 
 .banner h2 {
-  font-family: $helveticaNeue;
+  font-family: $georgia;
   font-style: italic;
   font-weight: normal;
   margin: 20px 0;
@@ -218,6 +218,8 @@ $evenRow: #f3ede6;
 
       & + .price-table .price-table-header-wrapper {
         position: relative;
+        padding: 0 14px;
+
         &:before {
           content: '';
           background: url("/images/table-shape.png") no-repeat;
@@ -438,6 +440,7 @@ $evenRow: #f3ede6;
 
   p {
     margin: 5px 0;
+    @include line-height(1.692);
   }
 }
 

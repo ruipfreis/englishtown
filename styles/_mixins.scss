@@ -37,3 +37,12 @@
   font-size: ($sizeValue * $base);
   font-size: $sizeValue + rem;
 }
+
+@mixin line-height($sizeValue: 1.6) {
+  $base : 10px;
+  @if $base_font_height {
+    $base:$base_font_height;
+  }
+  line-height: ($sizeValue * $base);
+  line-height: $sizeValue + rem;
+}
