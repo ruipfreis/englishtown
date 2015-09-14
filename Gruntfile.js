@@ -99,6 +99,16 @@ module.exports = function (grunt) {
 
     // Empties folders to start fresh
     clean: {
+      dist: {
+        files: [{
+          dot: true,
+          src: [
+            '.tmp',
+            '<%= appConfig.dist %>/{,*/}*',
+            '!<%= appConfig.dist %>/.git{,*/}*'
+          ]
+        }]
+      },
       server: '.tmp'
     },
 
@@ -144,10 +154,59 @@ module.exports = function (grunt) {
           ext: '.css'
         }]
       },
+      dist: {
+        // Takes every file that ends with .scss from the scss
+        // directory and compile them into the css directory.
+        // Also changes the extension from .scss into .css.
+        // Note: file name that begins with _ are ignored automatically
+        files: [{
+          expand: true,
+          cwd: '<%= appConfig.app %>/styles',
+          src: ['*.scss', '*.sass'],
+          dest: '<%= appConfig.dist %>/styles',
+          ext: '.css'
+        }]
+      },
       options: {
         sourceMap: false,
         outputStyle: 'nested',
         imagePath: "<%= appConfig.app %>/images",
+      }
+    },
+
+    // Copies remaining files to places other tasks can use
+    copy: {
+      dist: {
+        files: [{
+          expand: true,
+          dot: true,
+          cwd: '<%= appConfig.app %>',
+          dest: '<%= appConfig.dist %>',
+          src: [
+            '*.{ico,png,txt}',
+            '.htaccess',
+            '*.html',
+            'views/{,*/}*.html',
+            'images/{,*/}*.{webp}',
+            'fonts/{,*/}*.*'
+          ]
+        }, {
+          expand: true,
+          cwd: 'images',
+          dest: '<%= appConfig.dist %>/images',
+          src: ['*']
+        },{
+          expand: true,
+          cwd: '.',
+          dest: '<%= appConfig.dist %>',
+          src: ['data/*']
+        }]
+      },
+      styles: {
+        expand: true,
+        cwd: '<%= appConfig.app %>/styles',
+        dest: '.tmp/styles/',
+        src: '{,*/}*.css'
       }
     },
 
@@ -158,6 +217,9 @@ module.exports = function (grunt) {
       ],
       test: [
         'sass'
+      ],
+      dist: [
+        'sass:dist'
       ]
     }
   });
@@ -172,4 +234,12 @@ module.exports = function (grunt) {
       'watch'
     ]);
   });
+
+  grunt.registerTask('build', [
+    'clean:dist',
+    'wiredep',
+    'concurrent:dist',
+    'autoprefixer',
+    'copy:dist'
+  ]);
 };
