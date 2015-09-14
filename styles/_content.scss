@@ -58,7 +58,7 @@
 
 .breadcrumbs-wrapper {
   height: 59px;
-  background: url("/images/breadcrumbs-bg.png") center center;
+  background: url("../images/breadcrumbs-bg.png") center center;
   background-size: cover;
   padding: 0 15px;
 }
@@ -156,7 +156,7 @@
 }
 
 .pricing.section-wrapper {
-  background-image: url("/images/banner-pricing.png");
+  background-image: url("../images/banner-pricing.png");
 }
 //BANNERS END
 
@@ -222,7 +222,7 @@ $evenRow: #f3ede6;
 
         &:before {
           content: '';
-          background: url("/images/table-shape.png") no-repeat;
+          background: url("../images/table-shape.png") no-repeat;
           height: 98px;
           position: absolute;
           left: -1px;

@@ -512,7 +512,7 @@ header {
 
 .breadcrumbs-wrapper {
   height: 59px;
-  background: url("/images/breadcrumbs-bg.png") center center;
+  background: url("../images/breadcrumbs-bg.png") center center;
   background-size: cover;
   padding: 0 15px; }
 
@@ -592,7 +592,7 @@ header {
       background-position: center center; } }
 
 .pricing.section-wrapper {
-  background-image: url("/images/banner-pricing.png"); }
+  background-image: url("../images/banner-pricing.png"); }
 
 .price-tables-wrapper {
   overflow: hidden; }
@@ -631,7 +631,7 @@ header {
           padding: 0 14px; }
           .price-table:first-child + .price-table .price-table-header-wrapper:before {
             content: '';
-            background: url("/images/table-shape.png") no-repeat;
+            background: url("../images/table-shape.png") no-repeat;
             height: 98px;
             position: absolute;
             left: -1px;
