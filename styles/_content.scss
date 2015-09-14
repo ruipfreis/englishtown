@@ -31,9 +31,21 @@
   text-align: center;
 
   > h1 {
+    a {
+      text-decoration: none;
+    }
     sub {
       display: block;
       color: $pink;
+      @media #{$l-media-query} {
+        &:before {
+          content: '-';
+          color: $white;
+          padding-right: 5px;
+        }
+        display: inline;
+        vertical-align: baseline;
+      }
     }
   }
 
@@ -187,6 +199,7 @@ $evenRow: #f3ede6;
 
     &:first-child {
       border: 1px solid $price-table-border-color;
+      //border-right: none;
       width: 50%;
 
       li {
@@ -196,10 +209,34 @@ $evenRow: #f3ede6;
       .icon {
         margin: 0 15px;
       }
+
+      .price-table-footer {
+        text-align: left;
+      }
+
+      .price-table-footer-content {
+        max-width: 400px;
+      }
+
+      & + .price-table .price-table-header-wrapper {
+        position: relative;
+        &:before {
+          content: '';
+          background: url("/images/table-shape.png") no-repeat;
+          height: 98px;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 14px;
+        }
+      }
     }
 
     & + .price-table {
-      background: $evenRow;
+      li {
+        background: $evenRow;
+      }
+
       .price-table-header-wrapper {
         background-color: $evenRow;
       }
@@ -209,7 +246,9 @@ $evenRow: #f3ede6;
     }
 
     & + .price-table + .price-table {
-      background: $oddRow;
+      li {
+        background: $oddRow;
+      }
       .price-table-header-wrapper {
         background-color: $white;
       }
@@ -260,6 +299,7 @@ $evenRow: #f3ede6;
   li {
     border-bottom: 1px solid $price-table-border-color;
     padding: 15px;
+    background-color: $oddRow;
 
     &:first-child {
       border-top: 1px solid $price-table-border-color;
@@ -322,9 +362,10 @@ $evenRow: #f3ede6;
   padding: 15px;
 
   p {
+    @include font-size(1.385);
     font-family: $georgia;
     font-style: italic;
-    padding-bottom: 15px;
+    padding-bottom: 25px;
   }
 
   small {
@@ -362,6 +403,10 @@ $evenRow: #f3ede6;
     margin-top: 0;
   }
 
+  .bubble {
+    margin: 15px auto;
+  }
+
   @media #{$l-media-query} {
     float: left;
     max-width: 50%;
@@ -369,6 +414,16 @@ $evenRow: #f3ede6;
 
     &:first-child {
       margin-top: 35px;
+    }
+
+    .bubble {
+      float: left;
+      margin: 0 15px;
+    }
+
+    .et-offer {
+      padding-left: 90px;
+      padding-right: 30px;
     }
   }
 }
